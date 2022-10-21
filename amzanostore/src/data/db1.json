@@ -1,0 +1,89 @@
+{
+  "customerdata": [
+    {
+      "id": 1,
+      "customerFristName": "siva",
+      "customereLastName": "uppalure",
+      "customereEmailId": "ssreddy@gmail.com",
+      "customereNewPassWord": 9999999,
+      "customereConformPassWord": 99999999,
+      "customerePhoneNumber": 5654678899,
+      "customereState": "andhra pradesh",
+      "customereCity": "kadapa",
+      "customereVillage": "chinnasettipalle",
+      "customerPinCode": 516359
+    },
+    {
+      "id": 2,
+      "customerFristName": "siva",
+      "customereLastName": "uppalure",
+      "customereEmailId": "ssreddy@gmail.com",
+      "customereNewPassWord": 9999999,
+      "customereConformPassWord": 99999999,
+      "customerePhoneNumber": 5654678899,
+      "customereState": "andhra pradesh",
+      "customereCity": "kadapa",
+      "customereVillage": "chinnasettipalle",
+      "customerPinCode": 516359
+    },
+    {
+      "Id": "3",
+      "CustomerFristName": "chandra",
+      "CustomereLastName": "prakash",
+      "CustomereEmailId": "kurubachandraprakash@gmaiil.com",
+      "CustomereNewPassWord": "",
+      "CustomereConformPassWord": "eeeeee",
+      "CustomerePhoneNumber": "9603964231",
+      "CustomereState": "",
+      "CustomereCity": "adoni",
+      "CustomereVillage": "adoni",
+      "CustomerPinCode": "5183021",
+      "customereNewPassWord": "eeeeee",
+      "customereState": "andhra ",
+      "id": 3
+    },
+    {
+      "Id": "4",
+      "CustomerFristName": "sivasankar",
+      "CustomereLastName": "rrrrrr",
+      "CustomereEmailId": "ssreddy251098@gmail.com",
+      "CustomereNewPassWord": "",
+      "CustomereConformPassWord": "qqq",
+      "CustomerePhoneNumber": "9603964231",
+      "CustomereState": "andhrapradesh",
+      "CustomereCity": "andhra pradesh",
+      "CustomereVillage": "adoni",
+      "CustomerPinCode": "5183021",
+      "customereNewPassWord": "eeeeee",
+      "id": 4
+    },
+    {
+      "Id": "7",
+      "CustomerFristName": "sivasankar",
+      "CustomereLastName": "reddy",
+      "CustomereEmailId": "kurubachandraprakash@gmaiil.com",
+      "CustomereNewPassWord": "Chandra@1211",
+      "CustomereConformPassWord": "Chandra@1211",
+      "CustomerePhoneNumber": "9603964231",
+      "CustomereState": "andhrapradesh",
+      "CustomereCity": "adoni",
+      "CustomereVillage": "adoni",
+      "CustomerPinCode": "5183021",
+      "id": 5
+    },
+    {
+      "Id": "6",
+      "CustomerFristName": "sivasankar",
+      "CustomereLastName": "reddy",
+      "CustomereEmailId": "kurubachandraprakash@gmaiil.com",
+      "CustomereNewPassWord": "Chandra@121",
+      "CustomereConformPassWord": "Chandra@121",
+      "CustomerePhoneNumber": "9603964231",
+      "CustomereState": "andhrapradesh",
+      "CustomereCity": "adoni",
+      "CustomereVillage": "chinna",
+      "CustomerPinCode": "5183022",
+      "id": 6
+    }
+  ]
+}

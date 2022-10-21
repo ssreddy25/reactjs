@@ -1,0 +1,92 @@
+jons ex:
+
+1.select ename ,dname from employee inner join department using (DeptNo);
++----------+-------------+
+| ename    | dname       |
++----------+-------------+
+| venkat   | Operataions |
+| Nirmala  | Research    |
+| Pradeep  | Operataions |
+| Srinivas | Sales       |
+| Krishna  | Finance     |
+| Deepa    | Sales       |
+| Keerthi  | HR          |
++----------+-------------+
+
+2.select ename ,jname from employee , job where employee.jcode=job.jcode;
++----------+-------------+
+| ename    | jname       |
++----------+-------------+
+| Nirmala  | President   |
+| Pradeep  | SalesPerson |
+| Srinivas | SalesPerson |
+| Krishna  | Analyst     |
+| Deepa    | Analyst     |
+| Keerthi  | Analyst     |
++----------+-------------+
+
+3.select dname,lname from department d, location l where d.lcode=l.lcode;
++-------------+----------+
+| dname       | lname    |
++-------------+----------+
+| Accounting  | Chicago  |
+| Research    | New Yark |
+| Finance     | Chicago  |
+| Sales       | Chicago  |
+| HR          | Chicago  |
+| Sales       | Atlanta  |
+| Operataions | Paris    |
++-------------+----------+
+ select ename,dname from employee e,department d where e.deptno=d.deptno;
++----------+-------------+
+| ename    | dname       |
++----------+-------------+
+| venkat   | Operataions |
+| Nirmala  | Research    |
+| Pradeep  | Operataions |
+| Srinivas | Sales       |
+| Krishna  | Finance     |
+| Deepa    | Sales       |
+| Keerthi  | HR          |
++----------+-------------+
+
+using join key word.
+____________________
+
+ select e.ename, m.ename from employee e inner join employee m on e.mgrno=m.empno;
++----------+----------+
+| ename    | ename    |
++----------+----------+
+| Nirmala  | venkat   |
+| Pradeep  | venkat   |
+| Srinivas | venkat   |
+| Krishna  | Nirmala  |
+| Deepa    | Pradeep  |
+| Keerthi  | Srinivas |
++----------+----------+
+
+2. select ename,dname from employee inner join department using (deptno);
++----------+-------------+
+| ename    | dname       |
++----------+-------------+
+| venkat   | Operataions |
+| Nirmala  | Research    |
+| Pradeep  | Operataions |
+| Srinivas | Sales       |
+| Krishna  | Finance     |
+| Deepa    | Sales       |
+| Keerthi  | HR          |
++----------+-------------+
+3>
+select * from employee left outer join department  using (deptno);
++--------+-------+----------+-------+-------+------------+------------+------------+-------------+-------+
+| DeptNo | EmpNo | Ename    | jCode | MgrNo | HireDate   | Salary     | Commission | DName       | LCode |
++--------+-------+----------+-------+-------+------------+------------+------------+-------------+-------+
+|     40 |     1 | venkat   |   672 |  NULL | 2006-02-01 | 1200000.00 |   10000.00 | Operataions |   167 |
+|     20 |     2 | Nirmala  |   671 |     1 | 2007-04-02 |  800000.00 |   50000.00 | Research    |   124 |
+|     40 |     3 | Pradeep  |   669 |     1 | 2005-10-10 | 1000000.00 |       NULL | Operataions |   167 |
+|     30 |     4 | Srinivas |   669 |     1 | 2005-05-08 | 1000000.00 |       NULL | Sales       |   123 |
+|     22 |     5 | Krishna  |   668 |     2 | 2005-10-09 |  500000.00 |   20000.00 | Finance     |   122 |
+|     23 |     6 | Deepa    |   668 |     3 | 2007-09-09 |  600000.00 |       NULL | Sales       |   122 |
+|     24 |     7 | Keerthi  |   668 |     4 | 2006-06-05 |  600000.00 |       NULL | HR          |   122 |
++--------+-------+----------+-------+-------+------------+------------+------------+-------------+-------+

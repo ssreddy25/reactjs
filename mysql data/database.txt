@@ -1,0 +1,120 @@
+ create table Employee(
+    -> EmpNo INT(3) PRIMARY KEY,
+    -> Ename VARCHAR(35) NOT NULL,
+    -> jCode INT(3) REFERENCES job(jCode),
+    -> MgrNo INT(3) REFERENCES Employee(EmpNo),
+    -> HireDate DATE,
+    -> Salary FLOAT(10,2),
+    -> Commission FLOAT(11,2),
+    -> DeptNo INT(3) REFERENCES Department(DeptNo));
+Query OK, 0 rows affected, 6 warnings (0.70 sec)
+
+mysql> desc Employee;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| EmpNo      | int         | NO   | PRI | NULL    |       |
+| Ename      | varchar(35) | NO   |     | NULL    |       |
+| jCode      | int         | YES  |     | NULL    |       |
+| MgrNo      | int         | YES  |     | NULL    |       |
+| HireDate   | date        | YES  |     | NULL    |       |
+| Salary     | float(10,2) | YES  |     | NULL    |       |
+| Commission | float(11,2) | YES  |     | NULL    |       |
+| DeptNo     | int         | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+
+ insert into Employee
+    -> values(1,'venkat',672,NULL,'2006-02-01',1200000,10000,40),
+    -> (2,'Nirmala',1,671,'2007-04-02',800000,50000,20),
+    -> (3,'Pradeep',1,669,'2005-10-10',1000000,NULL,40),
+    -> (4,'Srinivas',1,669,'2005-05-08',1000000,NULL,30),
+    -> (5,'Krishna',2,668,'2005-10-09',500000,20000,22),
+    -> (6,'Deepa',3,668,'2007-09-09',600000,NULL,23),
+    -> (7,'Keerthi',4,668,'2006-06-05',600000,NULL,24);
+
+select * from employee;
++-------+----------+-------+-------+------------+------------+------------+--------+
+| EmpNo | Ename    | jCode | MgrNo | HireDate   | Salary     | Commission | DeptNo |
++-------+----------+-------+-------+------------+------------+------------+--------+
+|     1 | venkat   |   672 |  NULL | 2006-02-01 | 1200000.00 |   10000.00 |     40 |
+|     2 | Nirmala  |     1 |   671 | 2007-04-02 |  800000.00 |   50000.00 |     20 |
+|     3 | Pradeep  |     1 |   669 | 2005-10-10 | 1000000.00 |       NULL |     40 |
+|     4 | Srinivas |     1 |   669 | 2005-05-08 | 1000000.00 |       NULL |     30 |
+|     5 | Krishna  |     2 |   668 | 2005-10-09 |  500000.00 |   20000.00 |     22 |
+|     6 | Deepa    |     3 |   668 | 2007-09-09 |  600000.00 |       NULL |     23 |
+|     7 | Keerthi  |     4 |   668 | 2006-06-05 |  600000.00 |       NULL |     24 |
++-------+----------+-------+-------+------------+------------+------------+--------+
+
+ create table Department(
+    -> DeptNo INT(3) PRIMARY KEY,
+    -> DName VARCHAR(35),
+    -> LCode INT(3) REFERENCES Location(lCode));
+ insert into Department
+    -> values(10,'Accounting',122),
+    -> (20,'Research',124),
+    -> (30,'Sales',123),
+    -> (40,'Operataions',167),
+    -> (22,'Finance',122),
+    -> (23,'Sales',122),
+    -> (24,'HR',122);
+Query OK, 7 rows affected (0.23 sec)
+Records: 7  Duplicates: 0  Warnings: 0
+
+mysql> select * from Department;
++--------+-------------+-------+
+| DeptNo | DName       | LCode |
++--------+-------------+-------+
+|     10 | Accounting  |   122 |
+|     20 | Research    |   124 |
+|     22 | Finance     |   122 |
+|     23 | Sales       |   122 |
+|     24 | HR          |   122 |
+|     30 | Sales       |   123 |
+|     40 | Operataions |   167 |
++--------+-------------+-------+
+
+create table Job(
+    -> jCode INT(3) PRIMARY KEY,
+    -> JName VARCHAR(35) NOT NULL);
+
+ insert into Job
+    -> values(666,'Clerk'),
+    -> (667,'Trainee'),
+    -> (668,'Analyst'),
+    -> (669,'SalesPerson'),
+    -> (670,'Manager'),
+    -> (671,'President');
+
+ select * from  Job;
++-------+-------------+
+| jCode | JName       |
++-------+-------------+
+|   666 | Clerk       |
+|   667 | Trainee     |
+|   668 | Analyst     |
+|   669 | SalesPerson |
+|   670 | Manager     |
+|   671 | President   |
++-------+-------------+
+
+
+ create table Location(
+    -> lCode INT(3) PRIMARY KEY,
+    -> lName VARCHAR(35) NOT NULL);
+
+
+mysql> insert into Location
+    -> values(122,'Chicago'),
+    -> (123,'Atlanta'),
+    -> (124,'New Yark'),
+    -> (167,'Paris');
+
+ select * from Location;
++-------+----------+
+| lCode | lName    |
++-------+----------+
+|   122 | Chicago  |
+|   123 | Atlanta  |
+|   124 | New Yark |
+|   167 | Paris    |
++-------+----------+

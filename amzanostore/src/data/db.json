@@ -1,0 +1,30 @@
+{
+  "customerdata": [
+    {
+      "CusId": 1,
+      "CustomerFristName": "siva",
+      "CustomereLastName": "uppalure",
+      "CustomereEmailId": "ssreddy@gmail.com",
+      "CustomereNewPassWord": 9999999,
+      "CustomereConformPassWord": 99999999,
+      "CustomerePhoneNumber": 5654678899,
+      "CustomereState": "andhra pradesh",
+      "CustomereCity": "kadapa",
+      "CustomereVillage": "chinnasettipalle",
+      "CustomerPinCode": 516359
+    },
+    {
+      "CusId": 2,
+      "CustomerFristName": "siva",
+      "CustomereLastName": "uppalure",
+      "CustomereEmailId": "ssreddy@gmail.com",
+      "CustomereNewPassWord": 9999999,
+      "CustomereConformPassWord": 99999999,
+      "CustomerePhoneNumber": 5654678899,
+      "CustomereState": "andhra pradesh",
+      "CustomereCity": "kadapa",
+      "CustomereVillage": "chinnasettipalle",
+      "CustomerPinCode": 516359
+    }
+  ]
+}
